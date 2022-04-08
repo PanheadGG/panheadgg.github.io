@@ -1,13 +1,13 @@
 function changeTheme(){
-	if(document.getElementById('button').innerHTML==='Dark Theme'){
+	if(document.getElementById('changetheme').innerHTML===todark){
 		document.body.style.background='#555';
 		document.body.style.color='white';
-		document.getElementById('button').innerHTML='Light Theme';
+		document.getElementById('changetheme').innerHTML=tolight;
 	}
 	else{
 		document.body.style.background='white';
 		document.body.style.color='#555';
-		document.getElementById('button').innerHTML='Dark Theme';
+		document.getElementById('changetheme').innerHTML=todark;
 	}
 }
 		
