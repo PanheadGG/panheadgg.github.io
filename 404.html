@@ -1,28 +1,39 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<!-- 设置内容的编码格式 -->
-<meta charset="utf-8"/>
-<!-- 设置查询关键字 -->
-<meta name="keywords" content="404页"/>
-<!-- 设置网页的描述信息 -->
-<meta name="distribution" content="panheadgg.github.io/about"/>
-<!-- 设置作者 -->
-<meta name="author" content="PanheadGG"/>
-<link rel="icon" href="favicon.ico" type="image/icon"/>
-<title>404 Not Found</title>
-</head>
-
-<body>
-<br><center>
-<h1>404 Not Found</h1>
-<hr width="100%" align = "left" />
+<html> 
+ 
+ <head> 
+ <title>404 Not Found</title> 
+ <style type="text/css">
+ #button{
+    margin-top:10px;
+	background:dodgerblue;
+	color:white;
+	width:80%;
+	height:100px;
+	font-size: 50px;
+	outline: none;
+	border:5px solid deepskyblue;
+	border-radius: 5px;
+ }
+ #button:active{
+	transform: scale(0.95);
+ }
+ </style>
+ <script>
+ function toblog(){
+     window.location.href="https://panheadgg.github.io/blog"
+ }
+ </script>
+ </head> 
+ 
+ <body> 
+ <div class = 'logo' > 
+ <b>404 Not Found</b> 
+ <hr>
 对不起，您所访问的页面不存在或者已删除。
-
-<h1>博客首页：<a href="https://panheadgg.github.io/blog" target="_blank" title="">https://paneadgg.github.io/blog</a></h1>
-
-<h2><div id="countdown"></div></h2>
+<hr>
+<button id="button" onClick="toblog()">博客首页</button>
+<hr>
+<p><div id="countdown"></div></p>
 
 <script language="javascript" type="text/javascript">
     var time = 10
@@ -32,11 +43,28 @@
     function updateTime(){
         time = time-1
         if(time>=0){ divLabel.innerHTML = time.toString() + label }
-        else{ divLabel.innerHTML = "正在跳转到关于&amp;联系我，请稍后。。。" }
+        else{ divLabel.innerHTML = "正在跳转到博客，请稍后..." }
     }
     setInterval("updateTime()",1000);
     setTimeout("javascript:location.href='https://panheadgg.github.io/blog'", time*1000);
 </script>
-</center>
-</body>
+ </div> 
+ </body> 
+ 
+ <style> 
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap'); 
+ body{ 
+ font-family: 'Quicksand', sans-serif; 
+ background: linear-gradient( to right, dodgerblue 0%, deepskyblue 100%); 
+ color: white; 
+ } 
+ .logo{ 
+ text-align: center; 
+ font-size: 50px; 
+ margin-top: 10px; 
+ } 
+ body b{ 
+ font-size: 60px; 
+ } 
+ </style> 
 </html>
