@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap');
 
-html, button{
+html, changetheme{
 	font-family: Quicksand, sans-serif;
 }
 
