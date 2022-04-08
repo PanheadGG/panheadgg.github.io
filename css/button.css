@@ -1,0 +1,14 @@
+#button{
+    margin-top:10px;
+	background:dodgerblue;
+	color:white;
+	width:80%;
+	height:60px;
+	font-size: 20px;
+	outline: none;
+	border:5px solid deepskyblue;
+	border-radius: 5px;
+}
+#button:active{
+	transform: scale(0.95);
+}
