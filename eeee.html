@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <link  href="https://panheadgg.github.io/favicon.ico"  rel="shortcut icon" type="image/x-icon" />
+    <script src="changetheme.js"></script>
+    <script src="toblog.js"></script>
+    <head>
+        <link rel="stylesheet" href="/button.css" type="text/css" >
+        <link rel="stylesheet" type="text/css" href="default.css" >
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>锅锅头的网页</title>
+    </head>
+    <body>
+        <div class='logo'>
+            <b>
+                <span class='brackets left'><</span>
+                <span>锅锅头</span>
+                <span class='brackets right'>></span>
+            </b>
+            的网页
+        </div>
+
+        <p class='sample'>现在没有任何内容</p>
+        
+        <button id="blog" onClick="toblog()">前往博客</button>
+        <button id='changetheme' onClick='changeTheme()'></button>
+    </body>
+    <script>
+    var todark = "切换到黑夜模式";
+    document.getElementById('changetheme').innerHTML = todark; 
+    </script>
+</html>
+
+		
