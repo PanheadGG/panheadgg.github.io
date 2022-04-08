@@ -1,6 +1,6 @@
 function toblog(){
-    window.open("https://panheadgg.github.io/blog")
+    window.location.href="https://panheadgg.github.io/blog"
 }
 function tomain(){
-    window.open("https://panheadgg.github.io")
+    window.location.href="https://panheadgg.github.io"
 }
