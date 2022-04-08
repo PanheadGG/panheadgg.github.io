@@ -1,79 +1,17 @@
-
 <!DOCTYPE html>
 <html>
-<style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap');
-
-html, button{
-	font-family: Quicksand, sans-serif;
-}
-
-body{
-	background: white;
-	color:#555;
-	text-align: center;
-}
-
-.logo{
-	margin-top:30%;
-	font-size:30px;
-	font-weight:normal;
-}
-
-.brackets{
-	font-family: Advent Pro, sans-serif;
-}
-
-.left{
-	color:tomato;
-}
-
-.right{
-	color:dodgerblue;
-}
-
-.sample{
-	padding:20px;
-	font-size:18px;
-	background: inherit;
-	color:inherit;
-}
-
-#button{
-	margin-top:10px;
-	background:dodgerblue;
-	color:white;
-	width:80%;
-	height:60px;
-	font-size: 20px;
-	outline: none;
-	border:5px solid deepskyblue;
-	border-radius: 5px;
-}
-
-#button:active{
-	transform: scale(0.95);
-}
-</style>
-<script>
-function changeTheme(){
-	if(document.getElementById('button').innerHTML==='切换到黑夜模式'){
-		document.body.style.background='#555';
-		document.body.style.color='white';
-		document.getElementById('button').innerHTML='切换到白天模式';
-	}
-	else{
-		document.body.style.background='white';
-		document.body.style.color='#555';
-		document.getElementById('button').innerHTML='切换到黑夜模式';
-	}
-}
-</script>
-<link  href="https://panheadgg.github.io/favicon.ico"  rel="shortcut icon" type="image/x-icon" />
+    <link  href="https://panheadgg.github.io/favicon.ico"  rel="shortcut icon" type="image/x-icon" />
+    <script src="js/changetheme.js"></script>
+    <script src="js/tobutton.js"></script>
     <head>
+        <link rel="stylesheet" href="css/button.css" type="text/css" >
+        <link rel="stylesheet" type="text/css" href="css/default.css" >
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <title>锅锅头的网页</title>
+        <script>
+        var todark = "切换到黑夜模式";
+        var tolight = "切换到白天模式";
+        </script>
     </head>
     <body>
         <div class='logo'>
@@ -85,10 +23,12 @@ function changeTheme(){
             的网页
         </div>
 
-        <p class='sample'>现在没有任何内容。</p>
+        <p class='sample'>现在没有任何内容</p>
         
-        <button id='button' onClick='changeTheme()'>切换到黑夜模式</button>
+        <button id="button" onClick="toblog()">前往博客</button>
+        <button id='changetheme' onClick='changetheme()'></button>
     </body>
+    <script>
+    document.getElementById('changetheme').innerHTML = todark; 
+    </script>
 </html>
-
-		
