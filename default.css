@@ -36,7 +36,7 @@ body{
 	color:inherit;
 }
 
-#button{
+#changetheme{
 	margin-top:10px;
 	background:dodgerblue;
 	color:white;
@@ -48,7 +48,7 @@ body{
 	border-radius: 5px;
 }
 
-#button:active{
+#changetheme:active{
 	transform: scale(0.95);
 }
 		
