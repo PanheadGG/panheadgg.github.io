@@ -1,4 +1,4 @@
-function changeTheme(){
+function changetheme(){
 	if(document.getElementById('changetheme').innerHTML===todark){
 		document.body.style.background='#555';
 		document.body.style.color='white';
