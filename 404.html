@@ -20,7 +20,7 @@
  </style>
  <script>
  function toblog(){
-     window.location.href="https://panheadgg.github.io/blog"
+     window.location.replace("https://panheadgg.github.io/blog")
  }
  </script>
  </head> 
@@ -46,7 +46,7 @@
         else{ divLabel.innerHTML = "正在跳转到博客，请稍后..." }
     }
     setInterval("updateTime()",1000);
-    setTimeout("javascript:location.href='https://panheadgg.github.io/blog'", time*1000);
+    setTimeout("javascript:location.replace('https://panheadgg.github.io/blog')", time*1000);
 </script>
  </div> 
  </body> 
