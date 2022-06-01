@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title> </title>
+    <style>
+    h1{
+      margin-top:50%;
+      display: block;   /*子元素的布局方式在父元素设置*/
+      justify-content: center; /*水平居中*/
+      align-items: center;/*垂直居中*/
+    }
+    </style>
+  </head>
+  <body background="white"><center><font color="white">	
+	<h1>。。。。。对不起。</h1>
+  </font></center></body>
+</html>
