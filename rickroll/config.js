@@ -3,6 +3,8 @@ var playerConfig = {
     title:'你被骗了',
     src:'https://panheadgg.github.io/rickroll/rickroll.m3u8',
     poster:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/poster.jpg',
+    initFullFixed:true,
+    autoOrientaion:false,
     videoAttribute:[
         {attrKey:'webkit-playsinline',attrValue:''},
         {attrKey:'playsinline',attrValue:''},
