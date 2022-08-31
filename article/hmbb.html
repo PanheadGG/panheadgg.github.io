@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap');
+
+html, button{
+	font-family: Quicksand, sans-serif;
+}
+
+body{
+	background: white;
+	color:#555;
+	text-align: center;
+}
+
+.logo{
+	margin-top:30%;
+	font-size:30px;
+	font-weight:normal;
+}
+
+.brackets{
+	font-family: Advent Pro, sans-serif;
+}
+
+.left{
+	color:tomato;
+}
+
+.right{
+	color:dodgerblue;
+}
+
+.sample{
+	padding:20px;
+	font-size:18px;
+	background: inherit;
+	color:inherit;
+}
+
+#button{
+	margin-top:10px;
+	background:dodgerblue;
+	color:white;
+	width:80%;
+	height:60px;
+	font-size: 20px;
+	outline: none;
+	border:5px solid deepskyblue;
+	border-radius: 5px;
+}
+
+#button:active{
+	transform: scale(0.95);
+}
+</style>
+<style>
+#blog{
+    margin-top:10px;
+	background:dodgerblue;
+	color:white;
+	width:80%;
+	height:60px;
+	font-size: 20px;
+	outline: none;
+	border:5px solid deepskyblue;
+	border-radius: 5px;
+}
+#blog:active{
+	transform: scale(0.95);
+}
+</style>
+<script>
+function toblog(){
+    window.open("https://wwd.lanzouy.com/b021pjg0j")
+}
+</script>
+<script>
+function changeTheme(){
+	if(document.getElementById('button').innerHTML==='切换到黑夜模式'){
+		document.body.style.background='#555';
+		document.body.style.color='white';
+		document.getElementById('button').innerHTML='切换到白天模式';
+	}
+	else{
+		document.body.style.background='white';
+		document.body.style.color='#555';
+		document.getElementById('button').innerHTML='切换到黑夜模式';
+	}
+}
+</script>
+<link  href="https://panheadgg.github.io/favicon.ico"  rel="shortcut icon" type="image/x-icon" />
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>海绵宝宝DLC</title>
+    </head>
+    <body>
+        <div class='logo'>
+            <b>
+                <span class='brackets left'><</span>
+                <span>海绵宝宝</span>
+                <span class='brackets right'>></span>
+            </b>
+            DLC
+        </div>
+
+        <p class='sample'></p>
+        
+        <button id='blog' onClick='toblog()'>点击下载（密码0000）</button>
+        <!--button id='button' onClick='changeTheme()'>切换到黑夜模式</button-->
+    </body>
+</html>
+
+		
