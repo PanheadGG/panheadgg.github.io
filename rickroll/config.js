@@ -1,7 +1,7 @@
 var playerConfig = {
     container:'#mui-player',
     title:'你被骗了',
-    src:'https://panheadgg.github.io/rickroll/rickroll.m3u8',
+    src:'https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4',
     poster:'https://muiplayer.oss-cn-shanghai.aliyuncs.com/static/image/poster.jpg',
     initFullFixed:true,
     autoOrientaion:false,
