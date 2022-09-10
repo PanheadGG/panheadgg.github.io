@@ -5,9 +5,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
         <title>如何获得B站大会员</title>
         <link rel="stylesheet" href="https://panheadgg.github.com/muiplayer/mui-player.min.css">
-        <script src="https://panheadgg.github.io/muiplayer/mui-player.min.js"></script>
-        <script src="https://panheadgg.github.io/muiplayer/hls.min.js"></script>
         <script src="config.js"></script>
+        <script src="https://panheadgg.github.io/muiplayer/mui-player.min.js"></script>
     </head>
     
 	<body>
@@ -17,16 +16,6 @@
     
     <script>
         var config = window.playerConfig;
-        config.src = 'https://panheadgg.github.io/rickroll/rickroll.m3u8';
-        config.parse = {
-            type:'hls',
-            loader:Hls,
-            config:{
-                debug:false,
-            },
-        }
-        
-        console.log(config);
         var mp = new MuiPlayer(config);
         
     </script>
