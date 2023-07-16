@@ -16,7 +16,6 @@
 
 .console {
   font-family: unifont;
-  font-size: 25px;
     padding: 10px;
     min-height: 100px;
     position: relative;
@@ -39,7 +38,6 @@
 
   .log {
     font-family: unifont;
-    font-size: 25px;
       padding: 10px;
       min-height: 100px;
       position: absolute;
