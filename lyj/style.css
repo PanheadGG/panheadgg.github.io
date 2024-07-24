@@ -48,7 +48,7 @@ body {
     position: relative;
     width: 100%;
     height: 360px;
-    background-image: url(./images/bg.png);
+    background-image: url(https://gitee.com/panhead/lyj/blob/master/images/bg.png);
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -59,7 +59,7 @@ body {
     width: 100%;
     height: 210px;
     z-index: 5;
-    background-image: url(./images/cover-front.png);
+    background-image: urlhttps://gitee.com/panhead/lyj/blob/master/images/cover-front.png);
     background-position: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,11 +69,11 @@ body {
 }
 @keyframes rollingOver {
     10% {
-        background-image: url(./images/cover-front.png);
+        background-image: url(https://gitee.com/panhead/lyj/blob/master/images/cover-front.png);
     }
     100% {
         z-index: 2;
-        background-image: url(./images/cover-back.png);
+        background-image: url(https://gitee.com/panhead/lyj/blob/master/images/cover-back.png);
         transform: rotateX(-180deg);
     }
 }
