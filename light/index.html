@@ -1,0 +1,92 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" type="text/css" href="style.css" >
+    <title>MQTT Client Example</title>  
+    <script src="./mqtt.min.js"></script>  
+</head>  
+<body>  
+    <div class='logo'>
+        <b>
+            <span class='brackets left'><</span>
+            <span>MQTT</span>
+            <span class='brackets right'>></span>
+        </b>
+        测试
+    </div>
+
+    <p class='sample' id="state">现在没有任何内容</p>
+
+    <input type="text" name="textToSend" id="textToSend" placeholder="请输入">
+    
+    <button class="button" onClick="sendToMqtt(document.getElementById('textToSend').value)">发送至MQTT服务器</button>
+    <div class="container">
+        <div class="subContainer"><button class="button" onClick="sendToMqtt('on')">开灯</button></div>
+        <div class="subContainer"><button class="button" onClick="sendToMqtt('off')">关灯</button></div>
+    </div>
+
+    <script>  
+        // MQTT服务器地址  
+        var mqttUrl = 'wss://bemfa.com:9504/wss'; // 使用wss协议进行加密连接  
+        // MQTT连接选项  
+        var options = {  
+            clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),  
+            username: 'beid_3ITN4EDO2IzNx81NwUjN1ED',
+            password: '54Doz15s6ameQi8r0Bw77bg78dZ61M91',
+            clean: true,  
+            connectTimeout: 4000,  
+            reconnectPeriod: 1000,  
+            rejectUnauthorized: false // 如果MQTT服务器使用的是自签名证书，则需要设置为false  
+        };  
+  
+        // 创建一个MQTT客户端实例  
+        var client = mqtt.connect(mqttUrl, options);  
+  
+        // 连接成功  
+        client.on('connect', function () {  
+            console.log('Connected');  
+            document.getElementById("state").innerHTML="已连接";
+            // 订阅主题  
+            client.subscribe('light002', function (err) {  
+                if (!err) {  
+                    console.log('Subscribed');  
+                    document.getElementById("state").innerHTML="已订阅";
+                }  
+            });  
+  
+            // 发送消息  
+            //client.publish('light002/set', 'Hello MQTT');  
+        });  
+  
+        // 接收消息  
+        client.on('message', function (topic, message) {  
+            // message is Buffer  
+            console.log(message.toString());  
+            document.getElementById("state").innerHTML="接受消息: "+message.toString();
+            //client.end(); // 接收完消息后断开连接  
+        });  
+  
+        // 连接失败  
+        client.on('error', function (err) {  
+            console.log('Connection error: ', err);  
+        });  
+  
+        // 连接关闭  
+        client.on('close', function () {  
+            console.log('Connection closed');  
+        });  
+
+        //function sendToMqtt(){
+        //    client.publish('light002/set', document.getElementById("textToSend").value);
+        //}
+        function sendToMqtt(value){
+            client.publish('light002/set', value);
+        }
+  
+        // 如果需要，可以在某个时间点断开连接  
+        // client.end();  
+    </script>  
+</body>  
+</html>
